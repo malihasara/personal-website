@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { GraduationCap, Radio, Cpu, FileText } from "lucide-react"
 
 export function About() {
@@ -7,19 +8,17 @@ export function About() {
         <SectionHeading title="About Me" />
 
         <div className="grid items-center gap-12 lg:grid-cols-5">
-          {/* Photo placeholder */}
+          {/* Profile photo */}
           <div className="flex justify-center lg:col-span-2">
             <div className="glass-card glow-border card-hover relative h-72 w-72 overflow-hidden rounded-2xl sm:h-80 sm:w-80">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="mx-auto mb-3 flex h-16 w-16 items-center justify-center rounded-full bg-primary/20">
-                    <GraduationCap size={32} className="text-primary" />
-                  </div>
-                  <p className="text-sm font-medium text-muted-foreground">
-                    Professional Photo
-                  </p>
-                </div>
-              </div>
+              <Image
+                src="/profile.jpg"
+                alt="Portrait of Maliha Sara"
+                fill
+                sizes="(min-width: 1024px) 20rem, 18rem"
+                className="object-cover"
+                priority
+              />
             </div>
           </div>
 
